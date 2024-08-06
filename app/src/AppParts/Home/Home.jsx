@@ -8,7 +8,8 @@ export default function Home() {
     const showData = content.map((item, i) => (
         <div key={i}>
             {item}
-            {/* <button onClick={()=>setData()}>+</button> */}
+            {console.log(item)}
+            <button onClick={() => setData((prev) => data[i] = prev[i] + 1)}>+</button>
         </div>
 
     ))
