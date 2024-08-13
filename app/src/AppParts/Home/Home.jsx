@@ -7,8 +7,9 @@ export default function Home() {
 
     useEffect(() => {
         async function getImgData() {
-            const { data } = await axios(`hhttps://picsum.photos/300`)
+            const { data } = await axios(`https://placehold.co/300x300`)
             setImgData(data)
+            console.log(data)
 
         }
         getImgData()
@@ -18,8 +19,11 @@ export default function Home() {
 
     const showData = (
         <div>
-            {imgData}
-            <img />
+            {console.log('data use')}
+            <div>
+                <img src={imgData} alt="random image from test api" width='300' />
+            </div>
+            {/* {imgData} */}
             {/* <button onClick={() => setData(prev => prev + 1)}>+</button> */}
         </div>
     )
