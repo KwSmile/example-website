@@ -7,9 +7,11 @@ export default function Home() {
 
     useEffect(() => {
         async function getImgData() {
-            const { data } = await axios(`https://placehold.co/300x300`)
-            setImgData(data)
-            console.log(data)
+
+            const { data } = await axios(`https://placehold.co/300`, { responseType: 'blob' })
+            const imgUrl = URL.createObjectURL(data)
+            setImgData(imgUrl)
+
 
         }
         getImgData()
