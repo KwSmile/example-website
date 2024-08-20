@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './Main.scss'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './AppParts/Home/Home';
 import Root from './Root';
@@ -22,10 +22,10 @@ export default function App() {
   ])
 
   return (
-    <>
+    <main>
 
       <RouterProvider router={router} />
 
-    </>
+    </main>
   )
 }
