@@ -5,7 +5,7 @@ import "./Main.scss";
 export default function Root() {
 
     return (
-        <div>
+        <div className="mainLayout">
             <div id="sidebar" className="sidebar">
                 <Navigation />
             </div>

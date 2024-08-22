@@ -2,6 +2,12 @@ $mainColor: rgb(8, 90, 0);
 $textColor: rgb(19, 226, 0);
 $textColor2: rgb(12, 148, 0);
 
+.mainLayout {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -15,6 +21,7 @@ $textColor2: rgb(12, 148, 0);
     margin-right: 30px;
 
     a {
+        font-size: 20px;
         color: $textColor;
         &:hover {
             color: $textColor2;
@@ -31,6 +38,8 @@ main {
     background: $mainColor;
     color: $textColor;
 }
+
+// ROOT DEF STYLE -------------------------------
 
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -59,7 +68,7 @@ a:hover {
 body {
     margin: 0;
     display: flex;
-    place-items: center;
+    place-items: start;
     min-width: 320px;
     min-height: 100vh;
 }

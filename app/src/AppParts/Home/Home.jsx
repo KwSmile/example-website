@@ -19,20 +19,29 @@ export default function Home() {
     }, [])
 
 
+
+    const imgList = () => {
+        let arr = []
+        for (let index = 0; index < 20; index++) {
+            arr.push(<img src={imgData} alt="random image from test api" width='300' />)
+        }
+        console.log(arr)
+        return arr
+    }
+
     const showData = (
         <div>
-            {console.log('data use')}
-            <div>
-                <img src={imgData} alt="random image from test api" width='300' />
-            </div>
-            {/* {imgData} */}
-            {/* <button onClick={() => setData(prev => prev + 1)}>+</button> */}
+            {imgList.array.map(img => (
+                <>
+                    {img}
+                </>
+            ))}
         </div>
     )
 
     return (
-        <div>
+        <>
             {showData}
-        </div>
+        </>
     )
 }
